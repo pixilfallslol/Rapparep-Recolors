@@ -5,6 +5,7 @@ var imgs = ["https://i.imgur.com/9kOaC1a.png","https://i.imgur.com/n9bL0tz.png",
 
 var layers = [];
 var colors = [];
+var prevColors = [];
 
 var stretch = 0; // Added the stretch because i LOVE that animation.
 
@@ -44,6 +45,15 @@ function drawBase(){
 function mousePressed(){
   stretch = 100-(stretch/3);
   for(let i = 0; i < imgs.length; i++){
+    prevColors[i] = colors[i];
     colors[i] = color(random(255),random(255),random(255));
+  }
+}
+
+function keyPressed(){
+  if(key == 'b'){
+    for(let i = 0; i < imgs.length; i++){
+      colors[i] = prevColors[i];
+    }
   }
 }
