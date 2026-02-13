@@ -6,7 +6,7 @@ var imgs = ["https://i.imgur.com/9kOaC1a.png","https://i.imgur.com/n9bL0tz.png",
 var layers = [];
 var colors = [];
 
-var stretch = 0;
+var stretch = 0; // Added the stretch because i LOVE that animation.
 
 function preload(){
   for(let i = 0; i < imgs.length; i++){
